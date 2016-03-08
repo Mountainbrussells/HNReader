@@ -21,22 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.serviceController = [[BRSeviceController alloc] init];
+    self.newsTableView.delegate = self;
+    self.newsTableView.dataSource = self;
+    self.storyNumberArray = [[NSMutableArray alloc] init];
     
-    [self.serviceController getCurrentStoriesWithCompletion:^(NSDictionary *newsStories, NSError *error) {
+    
+    [self.serviceController getCurrentStoriesWithCompletion:^(NSArray *newsStories, NSError *error) {
         if (newsStories) {
-            NSDictionary *dict = newsStories;
+           self.storyNumberArray = [NSMutableArray arrayWithArray:newsStories];
             
-            self.storyNumberArray = [[NSMutableArray alloc] init];
-            for (NSString *number in dict) {
-                [self.storyNumberArray addObject:number];
-            }
+            NSLog(@"SortedArray = %@", self.storyNumberArray);
+
             
-            
+            [self.newsTableView reloadData];
         }
     }];
     
-    self.newsTableView.delegate = self;
-    self.newsTableView.dataSource = self;
+    
     
 }
 
@@ -44,5 +45,28 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 25;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (self.storyNumberArray.count > 0) {
+        NSString *storyNumber = self.storyNumberArray[indexPath.row];
+        [self.serviceController getStoryNumber:storyNumber withCompletion:^(NSDictionary *storyDetails, NSError *error) {
+            NSString *title = storyDetails[@"title"];
+            cell.textLabel.text = title;
+        }];
+        return cell;
+    }
+    
+    
+    return cell;
+}
+
+
 
 @end

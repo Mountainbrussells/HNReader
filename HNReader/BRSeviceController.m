@@ -15,7 +15,7 @@ static NSString *const kHackerNewsSuffix = @".json?print=pretty";
 
 @implementation BRSeviceController
 
-- (void) getCurrentStoriesWithCompletion:(void (^)(NSDictionary *, NSError *))completion
+- (void) getCurrentStoriesWithCompletion:(void (^)(NSArray *, NSError *))completion
 {
     NSString *urlString = kBaseHackerNewsAPIURL;
     urlString = [urlString stringByAppendingString:kHackerNewsNewStoriesVenue];
@@ -36,8 +36,33 @@ static NSString *const kHackerNewsSuffix = @".json?print=pretty";
         if (data) {
             NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSLog(@"ResponseDictionary content: %@", responseDictionary);
+            NSMutableArray *dictArray = [[NSMutableArray alloc] init];
+            for (NSString *number in responseDictionary) {
+                [dictArray addObject:number];
+            }
+            
+            NSArray *sortedArray = [dictArray sortedArrayUsingComparator: ^(id obj1, id obj2) {
+                
+                if ([obj1 integerValue] > [obj2 integerValue]) {
+                    return (NSComparisonResult)NSOrderedAscending;
+                }
+                
+                if ([obj1 integerValue] < [obj2 integerValue]) {
+                    return (NSComparisonResult)NSOrderedDescending;
+                }
+                return (NSComparisonResult)NSOrderedSame;
+            }];
+            
+            NSArray *returnArray = [NSArray arrayWithArray:sortedArray];
+            
+            NSLog(@"%@", returnArray);
+
+            
             if (completion) {
-                completion(responseDictionary, nil);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(returnArray, nil);
+                });
+                
             }
         }
         
@@ -69,13 +94,13 @@ static NSString *const kHackerNewsSuffix = @".json?print=pretty";
     
     NSURLSessionTask *task = [session dataTaskWithRequest:hackerNewsRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (response) {
-            NSLog(@"Request Response:%@", response);
+            // NSLog(@"Request Response:%@", response);
             
         }
         
         if (data) {
             NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            NSLog(@"ResponseDictionary content: %@", responseDictionary);
+            // NSLog(@"ResponseDictionary content: %@", responseDictionary);
             if (completion) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     completion(responseDictionary, nil);

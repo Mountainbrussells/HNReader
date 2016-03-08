@@ -9,9 +9,10 @@
 #import "FirstViewController.h"
 #import "BRSeviceController.h"
 
-@interface FirstViewController ()
+@interface FirstViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *newsTableView;
 @property (strong, nonatomic) BRSeviceController *serviceController;
+@property (strong, nonatomic) NSMutableArray *storyNumberArray;
 
 @end
 
@@ -21,7 +22,22 @@
     [super viewDidLoad];
     self.serviceController = [[BRSeviceController alloc] init];
     
-    [self.serviceController getCurrentStoriesWithCompletion:nil];
+    [self.serviceController getCurrentStoriesWithCompletion:^(NSDictionary *newsStories, NSError *error) {
+        if (newsStories) {
+            NSDictionary *dict = newsStories;
+            
+            self.storyNumberArray = [[NSMutableArray alloc] init];
+            for (NSString *number in dict) {
+                [self.storyNumberArray addObject:number];
+            }
+            
+            
+        }
+    }];
+    
+    self.newsTableView.delegate = self;
+    self.newsTableView.dataSource = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="2wk-fX-c2E" kind="show" id="JeK-me-sOp"/>
+                                            <segue destination="2wk-fX-c2E" kind="show" identifier="detailSegue" id="JeK-me-sOp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="0Y6-UW-lgg">
             <objects>
-                <viewController id="2wk-fX-c2E" sceneMemberID="viewController">
+                <viewController id="2wk-fX-c2E" customClass="BRDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kDe-Ip-7jW"/>
                         <viewControllerLayoutGuide type="bottom" id="WcB-pq-aQb"/>
@@ -89,10 +89,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bu-w4-QaD">
                                 <rect key="frame" x="223" y="80" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButton:" destination="2wk-fX-c2E" eventType="touchUpInside" id="ptf-39-WQ9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPw-4S-6FO">
                                 <rect key="frame" x="340" y="80" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="2wk-fX-c2E" eventType="touchUpInside" id="yoe-aw-LRc"/>
+                                </connections>
                             </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXe-bj-JMV">
                                 <rect key="frame" x="20" y="118" width="560" height="433"/>
@@ -114,6 +120,9 @@
                             <constraint firstItem="fPw-4S-6FO" firstAttribute="top" secondItem="nve-N5-etE" secondAttribute="bottom" constant="16" id="w0l-8F-Vrt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="JXe-bj-JMV" id="fjt-DW-iBk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U03-zj-tuh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1CV-Pq-kTW" userLabel="Exit" sceneMemberID="exit"/>

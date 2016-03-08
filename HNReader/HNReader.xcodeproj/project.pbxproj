@@ -17,6 +17,7 @@
 		C910EA751C8F3CD300EA1F3A /* HNReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA741C8F3CD300EA1F3A /* HNReaderTests.m */; };
 		C910EA801C8F3CD300EA1F3A /* HNReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA7F1C8F3CD300EA1F3A /* HNReaderUITests.m */; };
 		C910EA901C8F43FC00EA1F3A /* BRSeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA8F1C8F43FC00EA1F3A /* BRSeviceController.m */; };
+		C910EA931C8F7F7900EA1F3A /* BRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA921C8F7F7900EA1F3A /* BRDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		C910EA811C8F3CD300EA1F3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C910EA8E1C8F43FC00EA1F3A /* BRSeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSeviceController.h; sourceTree = "<group>"; };
 		C910EA8F1C8F43FC00EA1F3A /* BRSeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSeviceController.m; sourceTree = "<group>"; };
+		C910EA911C8F7F7900EA1F3A /* BRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDetailViewController.h; sourceTree = "<group>"; };
+		C910EA921C8F7F7900EA1F3A /* BRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				C910EA5B1C8F3CD300EA1F3A /* AppDelegate.m */,
 				C910EA5D1C8F3CD300EA1F3A /* FirstViewController.h */,
 				C910EA5E1C8F3CD300EA1F3A /* FirstViewController.m */,
+				C910EA911C8F7F7900EA1F3A /* BRDetailViewController.h */,
+				C910EA921C8F7F7900EA1F3A /* BRDetailViewController.m */,
 				C910EA601C8F3CD300EA1F3A /* SecondViewController.h */,
 				C910EA611C8F3CD300EA1F3A /* SecondViewController.m */,
 				C910EA631C8F3CD300EA1F3A /* Main.storyboard */,
@@ -289,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C910EA621C8F3CD300EA1F3A /* SecondViewController.m in Sources */,
+				C910EA931C8F7F7900EA1F3A /* BRDetailViewController.m in Sources */,
 				C910EA901C8F43FC00EA1F3A /* BRSeviceController.m in Sources */,
 				C910EA5C1C8F3CD300EA1F3A /* AppDelegate.m in Sources */,
 				C910EA5F1C8F3CD300EA1F3A /* FirstViewController.m in Sources */,
@@ -516,6 +522,7 @@
 				C910EA861C8F3CD300EA1F3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C910EA871C8F3CD300EA1F3A /* Build configuration list for PBXNativeTarget "HNReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +531,7 @@
 				C910EA891C8F3CD300EA1F3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C910EA8A1C8F3CD300EA1F3A /* Build configuration list for PBXNativeTarget "HNReaderUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +540,7 @@
 				C910EA8C1C8F3CD300EA1F3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

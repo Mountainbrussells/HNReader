@@ -16,6 +16,7 @@
 		C910EA6A1C8F3CD300EA1F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C910EA681C8F3CD300EA1F3A /* LaunchScreen.storyboard */; };
 		C910EA751C8F3CD300EA1F3A /* HNReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA741C8F3CD300EA1F3A /* HNReaderTests.m */; };
 		C910EA801C8F3CD300EA1F3A /* HNReaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA7F1C8F3CD300EA1F3A /* HNReaderUITests.m */; };
+		C910EA901C8F43FC00EA1F3A /* BRSeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA8F1C8F43FC00EA1F3A /* BRSeviceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		C910EA7B1C8F3CD300EA1F3A /* HNReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HNReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C910EA7F1C8F3CD300EA1F3A /* HNReaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNReaderUITests.m; sourceTree = "<group>"; };
 		C910EA811C8F3CD300EA1F3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C910EA8E1C8F43FC00EA1F3A /* BRSeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSeviceController.h; sourceTree = "<group>"; };
+		C910EA8F1C8F43FC00EA1F3A /* BRSeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSeviceController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 		C910EA4B1C8F3CD300EA1F3A = {
 			isa = PBXGroup;
 			children = (
+				C910EA8D1C8F43B600EA1F3A /* Controllers */,
 				C910EA561C8F3CD300EA1F3A /* HNReader */,
 				C910EA731C8F3CD300EA1F3A /* HNReaderTests */,
 				C910EA7E1C8F3CD300EA1F3A /* HNReaderUITests */,
@@ -143,6 +147,15 @@
 				C910EA811C8F3CD300EA1F3A /* Info.plist */,
 			);
 			path = HNReaderUITests;
+			sourceTree = "<group>";
+		};
+		C910EA8D1C8F43B600EA1F3A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C910EA8E1C8F43FC00EA1F3A /* BRSeviceController.h */,
+				C910EA8F1C8F43FC00EA1F3A /* BRSeviceController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C910EA621C8F3CD300EA1F3A /* SecondViewController.m in Sources */,
+				C910EA901C8F43FC00EA1F3A /* BRSeviceController.m in Sources */,
 				C910EA5C1C8F3CD300EA1F3A /* AppDelegate.m in Sources */,
 				C910EA5F1C8F3CD300EA1F3A /* FirstViewController.m in Sources */,
 				C910EA591C8F3CD300EA1F3A /* main.m in Sources */,

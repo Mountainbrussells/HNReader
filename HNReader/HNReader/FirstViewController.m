@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "BRSeviceController.h"
+#import "BRDetailViewController.h"
 
 @interface FirstViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *newsTableView;
@@ -46,6 +47,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - UITableViewDelegates
+
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 25;
@@ -65,6 +69,21 @@
     
     
     return cell;
+}
+
+#pragma mark - Seque preperations
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = [self.newsTableView indexPathForSelectedRow];
+    if ([[segue identifier] isEqualToString:@"detailSegue"]) {
+        BRDetailViewController *detailVC = [segue destinationViewController];
+        detailVC.storyNumber = self.storyNumberArray[indexPath.row];
+        detailVC.serviceController = self.serviceController;
+    }
+}
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
 }
 
 

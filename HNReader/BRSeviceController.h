@@ -15,5 +15,8 @@
 // return current list of stories
 - (void) getCurrentStoriesWithCompletion:(void(^)(NSDictionary *newsStories, NSError *error))completion;
 
+// return idividual stories Title and URL
+- (void) getStoryNumber: (NSString *)numberString withCompletion: (void(^)(NSDictionary *storyDetails, NSError *error))completion;
+
 
 @end

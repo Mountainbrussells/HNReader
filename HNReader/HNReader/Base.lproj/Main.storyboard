@@ -29,6 +29,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2wk-fX-c2E" kind="show" id="JeK-me-sOp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -58,6 +61,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0Y6-UW-lgg">
+            <objects>
+                <viewController id="2wk-fX-c2E" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kDe-Ip-7jW"/>
+                        <viewControllerLayoutGuide type="bottom" id="WcB-pq-aQb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xtd-Tv-So4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nve-N5-etE">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="92o-ad-t3t">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="OgJ-g7-IdC">
+                                            <connections>
+                                                <segue destination="1CV-Pq-kTW" kind="unwind" unwindAction="prepareForUnwind:" id="ohW-AX-GPE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bu-w4-QaD">
+                                <rect key="frame" x="223" y="80" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPw-4S-6FO">
+                                <rect key="frame" x="340" y="80" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXe-bj-JMV">
+                                <rect key="frame" x="20" y="118" width="560" height="433"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JXe-bj-JMV" firstAttribute="top" secondItem="fPw-4S-6FO" secondAttribute="bottom" constant="8" id="0Cc-aX-0gP"/>
+                            <constraint firstItem="JXe-bj-JMV" firstAttribute="trailing" secondItem="Xtd-Tv-So4" secondAttribute="trailingMargin" id="1Lz-6o-DeD"/>
+                            <constraint firstItem="9Bu-w4-QaD" firstAttribute="top" secondItem="nve-N5-etE" secondAttribute="bottom" constant="16" id="25w-lI-I4O"/>
+                            <constraint firstItem="fPw-4S-6FO" firstAttribute="centerX" secondItem="Xtd-Tv-So4" secondAttribute="centerX" constant="57" id="4Rk-FU-BC2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nve-N5-etE" secondAttribute="trailing" constant="-20" id="B18-Nw-Jqm"/>
+                            <constraint firstItem="WcB-pq-aQb" firstAttribute="top" secondItem="JXe-bj-JMV" secondAttribute="bottom" id="FL4-cU-YwU"/>
+                            <constraint firstItem="JXe-bj-JMV" firstAttribute="leading" secondItem="Xtd-Tv-So4" secondAttribute="leadingMargin" id="J6u-x0-rSR"/>
+                            <constraint firstItem="nve-N5-etE" firstAttribute="leading" secondItem="Xtd-Tv-So4" secondAttribute="leadingMargin" constant="-20" id="Kup-5U-1bd"/>
+                            <constraint firstItem="nve-N5-etE" firstAttribute="top" secondItem="kDe-Ip-7jW" secondAttribute="bottom" id="Uv2-vJ-JTA"/>
+                            <constraint firstItem="9Bu-w4-QaD" firstAttribute="centerX" secondItem="Xtd-Tv-So4" secondAttribute="centerX" constant="-57" id="pMR-hD-Ymp"/>
+                            <constraint firstItem="fPw-4S-6FO" firstAttribute="top" secondItem="nve-N5-etE" secondAttribute="bottom" constant="16" id="w0l-8F-Vrt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U03-zj-tuh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1CV-Pq-kTW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1411" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

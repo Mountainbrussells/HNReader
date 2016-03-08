@@ -46,6 +46,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - UITableViewDelegates
+
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 25;
@@ -65,6 +68,11 @@
     
     
     return cell;
+}
+
+#pragma mark - Seque preperations
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
 }
 
 

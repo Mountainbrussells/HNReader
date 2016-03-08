@@ -7,8 +7,11 @@
 //
 
 #import "FirstViewController.h"
+#import "BRSeviceController.h"
 
 @interface FirstViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *newsTableView;
+@property (strong, nonatomic) BRSeviceController *serviceController;
 
 @end
 
@@ -16,7 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.serviceController = [[BRSeviceController alloc] init];
+    
+    [self.serviceController getCurrentStoriesWithCompletion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -25,6 +25,7 @@
     self.newsTableView.delegate = self;
     self.newsTableView.dataSource = self;
     self.storyNumberArray = [[NSMutableArray alloc] init];
+    self.title = @"HNReader";
     
     
     [self.serviceController getCurrentStoriesWithCompletion:^(NSArray *newsStories, NSError *error) {
@@ -52,7 +53,7 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 25;
+    return self.storyNumberArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -84,9 +85,20 @@
     }
 }
 
--(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
-}
+#pragma mark - Refresh Control
 
+- (IBAction)refreshButton:(id)sender {
+    [self.serviceController getCurrentStoriesWithCompletion:^(NSArray *newsStories, NSError *error) {
+        if (newsStories) {
+            self.storyNumberArray = [NSMutableArray arrayWithArray:newsStories];
+            
+            NSLog(@"SortedArray = %@", self.storyNumberArray);
+            
+            
+            [self.newsTableView reloadData];
+        }
+    }];
+}
 
 
 @end

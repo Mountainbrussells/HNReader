@@ -31,8 +31,6 @@
     [self.serviceController getCurrentStoriesWithCompletion:^(NSArray *newsStories, NSError *error) {
         if (newsStories) {
            self.storyNumberArray = [NSMutableArray arrayWithArray:newsStories];
-            
-            NSLog(@"SortedArray = %@", self.storyNumberArray);
 
             
             [self.newsTableView reloadData];
@@ -88,11 +86,20 @@
 #pragma mark - Refresh Control
 
 - (IBAction)refreshButton:(id)sender {
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [spinner setFrame:CGRectMake(0, 0, 100, 100)];
+    spinner.transform = CGAffineTransformMakeScale(2, 2);
+    [spinner setColor:[UIColor darkGrayColor]];
+    [self.view addSubview:spinner];
+    [spinner setCenter:CGPointMake(self.view.center.x, 150)];
+    [self.view bringSubviewToFront:spinner];
+    [spinner startAnimating];
+    
     [self.serviceController getCurrentStoriesWithCompletion:^(NSArray *newsStories, NSError *error) {
         if (newsStories) {
             self.storyNumberArray = [NSMutableArray arrayWithArray:newsStories];
             
-            NSLog(@"SortedArray = %@", self.storyNumberArray);
+            [spinner stopAnimating];
             
             
             [self.newsTableView reloadData];

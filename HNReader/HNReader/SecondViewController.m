@@ -20,15 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.savedNewsArray = [self.coreDataController getSavedNews];
-    self.savedNewsTableView.delegate = self;
-    self.savedNewsTableView.dataSource = self;
-    [self.savedNewsTableView reloadData];
+
     
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    // Need to do in viewWillAppear so data loads everytime view appears, not just when view is loaded
     self.savedNewsArray = [self.coreDataController getSavedNews];
     self.savedNewsTableView.delegate = self;
     self.savedNewsTableView.dataSource = self;

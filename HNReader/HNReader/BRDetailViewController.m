@@ -26,6 +26,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    // Add spinner View
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [spinner setFrame:CGRectMake(0, 0, 100, 100)];
     spinner.transform = CGAffineTransformMakeScale(2, 2);
@@ -35,6 +36,7 @@
     [self.view bringSubviewToFront:spinner];
     [spinner startAnimating];
     
+    // Download webpage
     [self.serviceController getStoryNumber:self.storyNumber withCompletion:^(NSDictionary *storyDetails, NSError *error) {
         NSString *storyURL = storyDetails[@"url"];
         self.storyURL = storyURL;

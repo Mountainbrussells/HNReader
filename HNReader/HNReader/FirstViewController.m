@@ -86,6 +86,7 @@
 #pragma mark - Refresh Control
 
 - (IBAction)refreshButton:(id)sender {
+    // Start Spinner
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [spinner setFrame:CGRectMake(0, 0, 100, 100)];
     spinner.transform = CGAffineTransformMakeScale(2, 2);
@@ -95,6 +96,7 @@
     [self.view bringSubviewToFront:spinner];
     [spinner startAnimating];
     
+    // Refresh storyNumberArray
     [self.serviceController getCurrentStoriesWithCompletion:^(NSArray *newsStories, NSError *error) {
         if (newsStories) {
             self.storyNumberArray = [NSMutableArray arrayWithArray:newsStories];

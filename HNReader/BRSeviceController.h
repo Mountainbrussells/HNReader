@@ -5,6 +5,7 @@
 //  Created by Ben Russell on 3/8/16.
 //  Copyright © 2016 Ben Russell. All rights reserved.
 //
+/*  This is the controller for all RESTful calls */
 
 #import <Foundation/Foundation.h>
 

@@ -13,7 +13,7 @@
 @interface BRCoreDataController ()
 
 @property (strong, nonatomic) BRPersistenceController *persistencController;
-@property (strong, nonatomic) NSManagedObjectContext *moc;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -23,8 +23,43 @@
 {
     self = [super init];
     self.persistencController = persistenceController;
-    self.moc = self.persistencController.managedObjectContext;
+    self.managedObjectContext = self.persistencController.managedObjectContext;
     return self;
+}
+
+- (void)saveNewsStoryWithTitle:(NSString *)title andURL:(NSString *)url
+{
+    NewsStory *story = (NewsStory *)[NSEntityDescription insertNewObjectForEntityForName:@"NewsStory" inManagedObjectContext:self.managedObjectContext];
+    story.title = title;
+    story.urlString = url;
+    
+//    NSError *error = nil;
+//    if ([[self managedObjectContext] save:&error] == NO) {
+//        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+//    }
+    
+    [self.persistencController save];
+}
+
+- (NSArray *)getSavedNews;
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"NewsStory" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+//    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:NO];
+//    NSArray *sort = [NSArray arrayWithObject:sortDescriptor];
+//    fetchRequest.sortDescriptors = sort;
+    NSError *error;
+    NSArray *fetchedStories;
+    
+    fetchedStories = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    
+    if (fetchedStories.count > 0) {
+        return fetchedStories;
+    }
+    return nil;
+    
 }
 
 @end

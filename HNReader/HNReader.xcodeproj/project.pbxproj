@@ -11,6 +11,8 @@
 		C906FACC1C8FB7BC004A348D /* BRPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FACB1C8FB7BC004A348D /* BRPersistenceController.m */; };
 		C906FACF1C8FB872004A348D /* HNReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C906FACD1C8FB872004A348D /* HNReader.xcdatamodeld */; };
 		C906FAD21C8FC6C7004A348D /* BRCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAD11C8FC6C7004A348D /* BRCoreDataController.m */; };
+		C906FADB1C8FCF1D004A348D /* NewsStory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */; };
+		C906FADC1C8FCF1D004A348D /* NewsStory.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FADA1C8FCF1D004A348D /* NewsStory.m */; };
 		C910EA591C8F3CD300EA1F3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA581C8F3CD300EA1F3A /* main.m */; };
 		C910EA5C1C8F3CD300EA1F3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA5B1C8F3CD300EA1F3A /* AppDelegate.m */; };
 		C910EA5F1C8F3CD300EA1F3A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA5E1C8F3CD300EA1F3A /* FirstViewController.m */; };
@@ -48,6 +50,10 @@
 		C906FACE1C8FB872004A348D /* HNReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HNReader.xcdatamodel; sourceTree = "<group>"; };
 		C906FAD01C8FC6C7004A348D /* BRCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRCoreDataController.h; sourceTree = "<group>"; };
 		C906FAD11C8FC6C7004A348D /* BRCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRCoreDataController.m; sourceTree = "<group>"; };
+		C906FAD71C8FCF1D004A348D /* NewsStory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NewsStory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NewsStory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C906FAD91C8FCF1D004A348D /* NewsStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsStory.h; sourceTree = "<group>"; };
+		C906FADA1C8FCF1D004A348D /* NewsStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsStory.m; sourceTree = "<group>"; };
 		C910EA541C8F3CD300EA1F3A /* HNReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C910EA581C8F3CD300EA1F3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C910EA5A1C8F3CD300EA1F3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +117,10 @@
 			children = (
 				C906FACA1C8FB7B3004A348D /* BRPersistenceController.h */,
 				C906FACB1C8FB7BC004A348D /* BRPersistenceController.m */,
+				C906FAD71C8FCF1D004A348D /* NewsStory+CoreDataProperties.h */,
+				C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */,
+				C906FAD91C8FCF1D004A348D /* NewsStory.h */,
+				C906FADA1C8FCF1D004A348D /* NewsStory.m */,
 				C906FACD1C8FB872004A348D /* HNReader.xcdatamodeld */,
 			);
 			name = CoreDataSetup;
@@ -327,9 +337,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C910EA621C8F3CD300EA1F3A /* SecondViewController.m in Sources */,
+				C906FADC1C8FCF1D004A348D /* NewsStory.m in Sources */,
 				C906FACC1C8FB7BC004A348D /* BRPersistenceController.m in Sources */,
 				C910EA931C8F7F7900EA1F3A /* BRDetailViewController.m in Sources */,
 				C910EA901C8F43FC00EA1F3A /* BRSeviceController.m in Sources */,
+				C906FADB1C8FCF1D004A348D /* NewsStory+CoreDataProperties.m in Sources */,
 				C910EA5C1C8F3CD300EA1F3A /* AppDelegate.m in Sources */,
 				C910EA5F1C8F3CD300EA1F3A /* FirstViewController.m in Sources */,
 				C906FACF1C8FB872004A348D /* HNReader.xcdatamodeld in Sources */,

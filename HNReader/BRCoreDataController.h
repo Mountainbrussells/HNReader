@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "BRPersistenceController.h"
+#import "NewsStory+CoreDataProperties.h"
 
 @interface BRCoreDataController : NSObject
 
 - (id)initWithPersistenceController:(BRPersistenceController *)persistenceController;
+
+- (void)saveNewsStoryWithTitle:(NSString *)title andURL:(NSString *)url;
+
+- (NSArray *)getSavedNews;
 
 @end

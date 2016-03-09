@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
+
+@class BRPersistenceController;
+@class BRCoreDataController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, readonly) BRPersistenceController *persistenceController;
+@property (strong, readonly) BRCoreDataController *coreDataController;
 
 
 @end

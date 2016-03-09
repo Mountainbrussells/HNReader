@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BRPersistenceController.h"
+#import "BRCoreDataController.h"
 
 @interface FirstViewController : UIViewController
+
+@property (nonatomic, strong) BRPersistenceController *persistenceController;
+@property (nonatomic, strong) BRCoreDataController *coreDataController;
+
+
 
 
 @end

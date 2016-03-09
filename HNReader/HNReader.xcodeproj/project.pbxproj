@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C906FAC41C8FB718004A348D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C906FAC31C8FB718004A348D /* CoreData.framework */; };
+		C906FACC1C8FB7BC004A348D /* BRPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FACB1C8FB7BC004A348D /* BRPersistenceController.m */; };
+		C906FACF1C8FB872004A348D /* HNReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C906FACD1C8FB872004A348D /* HNReader.xcdatamodeld */; };
+		C906FAD21C8FC6C7004A348D /* BRCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAD11C8FC6C7004A348D /* BRCoreDataController.m */; };
+		C906FADB1C8FCF1D004A348D /* NewsStory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */; };
+		C906FADC1C8FCF1D004A348D /* NewsStory.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FADA1C8FCF1D004A348D /* NewsStory.m */; };
+		C906FADF1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FADE1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m */; };
 		C910EA591C8F3CD300EA1F3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA581C8F3CD300EA1F3A /* main.m */; };
 		C910EA5C1C8F3CD300EA1F3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA5B1C8F3CD300EA1F3A /* AppDelegate.m */; };
 		C910EA5F1C8F3CD300EA1F3A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA5E1C8F3CD300EA1F3A /* FirstViewController.m */; };
@@ -38,6 +45,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C906FAC31C8FB718004A348D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C906FACA1C8FB7B3004A348D /* BRPersistenceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRPersistenceController.h; sourceTree = "<group>"; };
+		C906FACB1C8FB7BC004A348D /* BRPersistenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPersistenceController.m; sourceTree = "<group>"; };
+		C906FACE1C8FB872004A348D /* HNReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HNReader.xcdatamodel; sourceTree = "<group>"; };
+		C906FAD01C8FC6C7004A348D /* BRCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRCoreDataController.h; sourceTree = "<group>"; };
+		C906FAD11C8FC6C7004A348D /* BRCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRCoreDataController.m; sourceTree = "<group>"; };
+		C906FAD71C8FCF1D004A348D /* NewsStory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NewsStory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NewsStory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C906FAD91C8FCF1D004A348D /* NewsStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsStory.h; sourceTree = "<group>"; };
+		C906FADA1C8FCF1D004A348D /* NewsStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsStory.m; sourceTree = "<group>"; };
+		C906FADD1C8FE2F2004A348D /* BRSavedStoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSavedStoryDetailViewController.h; sourceTree = "<group>"; };
+		C906FADE1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSavedStoryDetailViewController.m; sourceTree = "<group>"; };
 		C910EA541C8F3CD300EA1F3A /* HNReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C910EA581C8F3CD300EA1F3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C910EA5A1C8F3CD300EA1F3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C906FAC41C8FB718004A348D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +107,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C906FAC51C8FB72A004A348D /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				C906FAC31C8FB718004A348D /* CoreData.framework */,
+			);
+			name = FrameWorks;
+			sourceTree = "<group>";
+		};
+		C906FAC91C8FB78B004A348D /* CoreDataSetup */ = {
+			isa = PBXGroup;
+			children = (
+				C906FACA1C8FB7B3004A348D /* BRPersistenceController.h */,
+				C906FACB1C8FB7BC004A348D /* BRPersistenceController.m */,
+				C906FAD71C8FCF1D004A348D /* NewsStory+CoreDataProperties.h */,
+				C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */,
+				C906FAD91C8FCF1D004A348D /* NewsStory.h */,
+				C906FADA1C8FCF1D004A348D /* NewsStory.m */,
+				C906FACD1C8FB872004A348D /* HNReader.xcdatamodeld */,
+			);
+			name = CoreDataSetup;
+			sourceTree = "<group>";
+		};
 		C910EA4B1C8F3CD300EA1F3A = {
 			isa = PBXGroup;
 			children = (
+				C906FAC91C8FB78B004A348D /* CoreDataSetup */,
+				C906FAC51C8FB72A004A348D /* FrameWorks */,
 				C910EA8D1C8F43B600EA1F3A /* Controllers */,
 				C910EA561C8F3CD300EA1F3A /* HNReader */,
 				C910EA731C8F3CD300EA1F3A /* HNReaderTests */,
@@ -119,6 +163,8 @@
 				C910EA921C8F7F7900EA1F3A /* BRDetailViewController.m */,
 				C910EA601C8F3CD300EA1F3A /* SecondViewController.h */,
 				C910EA611C8F3CD300EA1F3A /* SecondViewController.m */,
+				C906FADD1C8FE2F2004A348D /* BRSavedStoryDetailViewController.h */,
+				C906FADE1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m */,
 				C910EA631C8F3CD300EA1F3A /* Main.storyboard */,
 				C910EA661C8F3CD300EA1F3A /* Assets.xcassets */,
 				C910EA681C8F3CD300EA1F3A /* LaunchScreen.storyboard */,
@@ -159,6 +205,8 @@
 			children = (
 				C910EA8E1C8F43FC00EA1F3A /* BRSeviceController.h */,
 				C910EA8F1C8F43FC00EA1F3A /* BRSeviceController.m */,
+				C906FAD01C8FC6C7004A348D /* BRCoreDataController.h */,
+				C906FAD11C8FC6C7004A348D /* BRCoreDataController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -294,11 +342,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C910EA621C8F3CD300EA1F3A /* SecondViewController.m in Sources */,
+				C906FADC1C8FCF1D004A348D /* NewsStory.m in Sources */,
+				C906FACC1C8FB7BC004A348D /* BRPersistenceController.m in Sources */,
 				C910EA931C8F7F7900EA1F3A /* BRDetailViewController.m in Sources */,
 				C910EA901C8F43FC00EA1F3A /* BRSeviceController.m in Sources */,
+				C906FADB1C8FCF1D004A348D /* NewsStory+CoreDataProperties.m in Sources */,
 				C910EA5C1C8F3CD300EA1F3A /* AppDelegate.m in Sources */,
 				C910EA5F1C8F3CD300EA1F3A /* FirstViewController.m in Sources */,
+				C906FACF1C8FB872004A348D /* HNReader.xcdatamodeld in Sources */,
 				C910EA591C8F3CD300EA1F3A /* main.m in Sources */,
+				C906FAD21C8FC6C7004A348D /* BRCoreDataController.m in Sources */,
+				C906FADF1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +597,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C906FACD1C8FB872004A348D /* HNReader.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C906FACE1C8FB872004A348D /* HNReader.xcdatamodel */,
+			);
+			currentVersion = C906FACE1C8FB872004A348D /* HNReader.xcdatamodel */;
+			path = HNReader.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C910EA4C1C8F3CD300EA1F3A /* Project object */;
 }

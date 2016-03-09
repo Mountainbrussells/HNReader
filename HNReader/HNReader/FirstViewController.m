@@ -80,6 +80,7 @@
         BRDetailViewController *detailVC = [segue destinationViewController];
         detailVC.storyNumber = self.storyNumberArray[indexPath.row];
         detailVC.serviceController = self.serviceController;
+        detailVC.coreDataController = self.coreDataController;
     }
 }
 

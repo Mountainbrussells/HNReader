@@ -11,6 +11,7 @@
 @interface BRDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) NSString *storyURL;
+@property (strong, nonatomic) NSString *storyTitle;
 @end
 
 @implementation BRDetailViewController
@@ -22,6 +23,8 @@
     [self.serviceController getStoryNumber:self.storyNumber withCompletion:^(NSDictionary *storyDetails, NSError *error) {
         NSString *storyURL = storyDetails[@"url"];
         self.storyURL = storyURL;
+        NSString *storyTitle = storyDetails[@"title"];
+        self.storyTitle = storyTitle;
         NSURL *url = [NSURL URLWithString:storyURL];
         NSURLRequest *storyRequest = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:storyRequest];
@@ -40,6 +43,7 @@
     
 }
 - (IBAction)saveButton:(id)sender {
+    [self.coreDataController saveNewsStoryWithTitle:self.storyTitle andURL:self.storyURL];
 }
 
 

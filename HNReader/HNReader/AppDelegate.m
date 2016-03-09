@@ -8,7 +8,16 @@
 
 #import "AppDelegate.h"
 
+#import "BRPersistenceController.h"
+#import "BRCoreDataController.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+
+
 @interface AppDelegate ()
+
+@property (strong, readwrite) BRPersistenceController *persistenceController;
+@property (strong, readwrite) BRCoreDataController *coreDataController;
 
 @end
 
@@ -16,7 +25,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self setPersistenceController:[[BRPersistenceController alloc] initWithCallBack:nil]];
+    self.coreDataController = [[BRCoreDataController alloc] initWithPersistenceController:self.persistenceController];
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    
+    FirstViewController *firstVC = [tabBarController.viewControllers objectAtIndex:0];
+    firstVC.persistenceController = self.persistenceController;
+    firstVC.coreDataController = self.coreDataController;
+    
+    SecondViewController *secondVC = [tabBarController.viewControllers objectAtIndex:1];
+    secondVC.persistenceController = self.persistenceController;
+    secondVC.coreDataController = self.coreDataController;
+    
+    
     return YES;
 }
 
@@ -26,8 +48,7 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[self persistenceController] save];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -39,7 +60,8 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[self persistenceController] save];
+
 }
 
 @end

@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "BRSeviceController.h"
+#import "BRCoreDataController.h"
 
 @interface BRDetailViewController : UIViewController
 
 @property NSString *storyNumber;
 
 @property BRSeviceController *serviceController;
+@property BRCoreDataController *coreDataController;
 
 @end

@@ -13,6 +13,7 @@
 		C906FAD21C8FC6C7004A348D /* BRCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAD11C8FC6C7004A348D /* BRCoreDataController.m */; };
 		C906FADB1C8FCF1D004A348D /* NewsStory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */; };
 		C906FADC1C8FCF1D004A348D /* NewsStory.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FADA1C8FCF1D004A348D /* NewsStory.m */; };
+		C906FADF1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FADE1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m */; };
 		C910EA591C8F3CD300EA1F3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA581C8F3CD300EA1F3A /* main.m */; };
 		C910EA5C1C8F3CD300EA1F3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA5B1C8F3CD300EA1F3A /* AppDelegate.m */; };
 		C910EA5F1C8F3CD300EA1F3A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA5E1C8F3CD300EA1F3A /* FirstViewController.m */; };
@@ -54,6 +55,8 @@
 		C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NewsStory+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C906FAD91C8FCF1D004A348D /* NewsStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsStory.h; sourceTree = "<group>"; };
 		C906FADA1C8FCF1D004A348D /* NewsStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsStory.m; sourceTree = "<group>"; };
+		C906FADD1C8FE2F2004A348D /* BRSavedStoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSavedStoryDetailViewController.h; sourceTree = "<group>"; };
+		C906FADE1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSavedStoryDetailViewController.m; sourceTree = "<group>"; };
 		C910EA541C8F3CD300EA1F3A /* HNReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C910EA581C8F3CD300EA1F3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C910EA5A1C8F3CD300EA1F3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				C910EA921C8F7F7900EA1F3A /* BRDetailViewController.m */,
 				C910EA601C8F3CD300EA1F3A /* SecondViewController.h */,
 				C910EA611C8F3CD300EA1F3A /* SecondViewController.m */,
+				C906FADD1C8FE2F2004A348D /* BRSavedStoryDetailViewController.h */,
+				C906FADE1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m */,
 				C910EA631C8F3CD300EA1F3A /* Main.storyboard */,
 				C910EA661C8F3CD300EA1F3A /* Assets.xcassets */,
 				C910EA681C8F3CD300EA1F3A /* LaunchScreen.storyboard */,
@@ -347,6 +352,7 @@
 				C906FACF1C8FB872004A348D /* HNReader.xcdatamodeld in Sources */,
 				C910EA591C8F3CD300EA1F3A /* main.m in Sources */,
 				C906FAD21C8FC6C7004A348D /* BRCoreDataController.m in Sources */,
+				C906FADF1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

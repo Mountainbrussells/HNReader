@@ -19,6 +19,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [spinner setFrame:CGRectMake(0, 0, 100, 100)];
+    spinner.transform = CGAffineTransformMakeScale(2, 2);
+    [spinner setColor:[UIColor darkGrayColor]];
+    [self.view addSubview:spinner];
+    [spinner setCenter:CGPointMake(self.view.center.x, 150)];
+    [self.view bringSubviewToFront:spinner];
+    [spinner startAnimating];
     
     [self.serviceController getStoryNumber:self.storyNumber withCompletion:^(NSDictionary *storyDetails, NSError *error) {
         NSString *storyURL = storyDetails[@"url"];
@@ -27,10 +42,10 @@
         self.storyTitle = storyTitle;
         NSURL *url = [NSURL URLWithString:storyURL];
         NSURLRequest *storyRequest = [NSURLRequest requestWithURL:url];
+        
         [self.webView loadRequest:storyRequest];
+        [spinner stopAnimating];
     }];
-    
-    
 }
 
 - (IBAction)shareButton:(id)sender {

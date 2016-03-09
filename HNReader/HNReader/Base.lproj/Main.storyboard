@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--New News-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="1Kx-ye-fAt">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Kx-ye-fAt" id="ltP-eM-CZE">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
@@ -35,32 +35,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWb-uM-K9Y">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="HNReader" id="atx-QA-r0H"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oF5-AT-Xpe" firstAttribute="top" secondItem="dWb-uM-K9Y" secondAttribute="bottom" id="EMn-NO-WgS"/>
                             <constraint firstItem="oF5-AT-Xpe" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="JYP-0p-eza"/>
                             <constraint firstItem="oF5-AT-Xpe" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="T8h-R6-CaO"/>
-                            <constraint firstItem="dWb-uM-K9Y" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="ao4-JB-IUX"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="oF5-AT-Xpe" secondAttribute="bottom" id="rNR-9g-P5B"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dWb-uM-K9Y" secondAttribute="trailing" constant="-20" id="sKJ-kp-oQE"/>
-                            <constraint firstItem="dWb-uM-K9Y" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="vqI-tf-EQZ"/>
+                            <constraint firstItem="oF5-AT-Xpe" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="wpk-UJ-gT0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New News" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="1ik-ss-K0I">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="refresh" id="buF-bG-l2w">
+                            <connections>
+                                <action selector="refreshButton:" destination="9pv-A4-QxB" id="bLe-5a-zVb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="newsTableView" destination="oF5-AT-Xpe" id="rsZ-dZ-Rzz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1562" y="-320"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="0Y6-UW-lgg">
@@ -74,18 +71,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nve-N5-etE">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem id="92o-ad-t3t">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="OgJ-g7-IdC">
-                                            <connections>
-                                                <segue destination="1CV-Pq-kTW" kind="unwind" unwindAction="prepareForUnwind:" id="ohW-AX-GPE"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bu-w4-QaD">
                                 <rect key="frame" x="223" y="80" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
@@ -109,15 +94,12 @@
                         <constraints>
                             <constraint firstItem="JXe-bj-JMV" firstAttribute="top" secondItem="fPw-4S-6FO" secondAttribute="bottom" constant="8" id="0Cc-aX-0gP"/>
                             <constraint firstItem="JXe-bj-JMV" firstAttribute="trailing" secondItem="Xtd-Tv-So4" secondAttribute="trailingMargin" id="1Lz-6o-DeD"/>
-                            <constraint firstItem="9Bu-w4-QaD" firstAttribute="top" secondItem="nve-N5-etE" secondAttribute="bottom" constant="16" id="25w-lI-I4O"/>
                             <constraint firstItem="fPw-4S-6FO" firstAttribute="centerX" secondItem="Xtd-Tv-So4" secondAttribute="centerX" constant="57" id="4Rk-FU-BC2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nve-N5-etE" secondAttribute="trailing" constant="-20" id="B18-Nw-Jqm"/>
                             <constraint firstItem="WcB-pq-aQb" firstAttribute="top" secondItem="JXe-bj-JMV" secondAttribute="bottom" id="FL4-cU-YwU"/>
                             <constraint firstItem="JXe-bj-JMV" firstAttribute="leading" secondItem="Xtd-Tv-So4" secondAttribute="leadingMargin" id="J6u-x0-rSR"/>
-                            <constraint firstItem="nve-N5-etE" firstAttribute="leading" secondItem="Xtd-Tv-So4" secondAttribute="leadingMargin" constant="-20" id="Kup-5U-1bd"/>
-                            <constraint firstItem="nve-N5-etE" firstAttribute="top" secondItem="kDe-Ip-7jW" secondAttribute="bottom" id="Uv2-vJ-JTA"/>
+                            <constraint firstItem="9Bu-w4-QaD" firstAttribute="top" secondItem="kDe-Ip-7jW" secondAttribute="bottom" constant="16" id="ZWI-ru-hl3"/>
                             <constraint firstItem="9Bu-w4-QaD" firstAttribute="centerX" secondItem="Xtd-Tv-So4" secondAttribute="centerX" constant="-57" id="pMR-hD-Ymp"/>
-                            <constraint firstItem="fPw-4S-6FO" firstAttribute="top" secondItem="nve-N5-etE" secondAttribute="bottom" constant="16" id="w0l-8F-Vrt"/>
+                            <constraint firstItem="9Bu-w4-QaD" firstAttribute="baseline" secondItem="fPw-4S-6FO" secondAttribute="baseline" id="wNb-RX-5Ox"/>
                         </constraints>
                     </view>
                     <connections>
@@ -125,9 +107,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U03-zj-tuh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1CV-Pq-kTW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1411" y="-320"/>
+            <point key="canvasLocation" x="2223" y="-320"/>
         </scene>
         <!--Saved News-->
         <scene sceneID="wg7-f3-ORb">
@@ -245,13 +226,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="uTu-mQ-ZQx" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--New News-->
+        <scene sceneID="YhH-nN-0aY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uTu-mQ-ZQx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New News" image="first" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aqw-62-BMi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Xsb-rD-1ze"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2A-hi-OGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
         </scene>
     </scenes>
     <resources>

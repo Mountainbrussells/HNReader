@@ -30,10 +30,13 @@
     
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     
-    FirstViewController *firstVC = [tabBarController.viewControllers objectAtIndex:0];
+    // I will use a navigation controller in the New News View Controller
+    UINavigationController *navVCOne = [tabBarController.viewControllers objectAtIndex:0];
+    FirstViewController *firstVC = [navVCOne.viewControllers objectAtIndex:0];
     firstVC.persistenceController = self.persistenceController;
     firstVC.coreDataController = self.coreDataController;
     
+    // I will use an Unwind Segue in the Saved News View Controller
     SecondViewController *secondVC = [tabBarController.viewControllers objectAtIndex:1];
     secondVC.persistenceController = self.persistenceController;
     secondVC.coreDataController = self.coreDataController;

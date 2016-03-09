@@ -25,13 +25,12 @@
     self.newsTableView.delegate = self;
     self.newsTableView.dataSource = self;
     self.storyNumberArray = [[NSMutableArray alloc] init];
+    self.title = @"HNReader";
     
     
     [self.serviceController getCurrentStoriesWithCompletion:^(NSArray *newsStories, NSError *error) {
         if (newsStories) {
            self.storyNumberArray = [NSMutableArray arrayWithArray:newsStories];
-            
-            NSLog(@"SortedArray = %@", self.storyNumberArray);
 
             
             [self.newsTableView reloadData];
@@ -52,7 +51,7 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 25;
+    return self.storyNumberArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -84,9 +83,29 @@
     }
 }
 
--(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
-}
+#pragma mark - Refresh Control
 
+- (IBAction)refreshButton:(id)sender {
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [spinner setFrame:CGRectMake(0, 0, 100, 100)];
+    spinner.transform = CGAffineTransformMakeScale(2, 2);
+    [spinner setColor:[UIColor darkGrayColor]];
+    [self.view addSubview:spinner];
+    [spinner setCenter:CGPointMake(self.view.center.x, 150)];
+    [self.view bringSubviewToFront:spinner];
+    [spinner startAnimating];
+    
+    [self.serviceController getCurrentStoriesWithCompletion:^(NSArray *newsStories, NSError *error) {
+        if (newsStories) {
+            self.storyNumberArray = [NSMutableArray arrayWithArray:newsStories];
+            
+            [spinner stopAnimating];
+            
+            
+            [self.newsTableView reloadData];
+        }
+    }];
+}
 
 
 @end

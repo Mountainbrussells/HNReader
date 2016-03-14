@@ -19,4 +19,6 @@
 
 - (NSArray *)getSavedNews;
 
+- (void)deleteSavedStory:(NSManagedObject *)savedStory;
+
 @end

@@ -58,6 +58,21 @@
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NewsStory *story = self.savedNewsArray[indexPath.row];
+        [self.coreDataController deleteSavedStory:story];
+        self.savedNewsArray = [self.coreDataController getSavedNews];
+        [self.savedNewsTableView reloadData];
+    }
+}
+
 #pragma mark - Segue Preperation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

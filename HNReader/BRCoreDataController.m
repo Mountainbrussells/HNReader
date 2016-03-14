@@ -59,4 +59,10 @@
     
 }
 
+- (void)deleteSavedStory:(NSManagedObject *)savedStory
+{
+    [self.managedObjectContext deleteObject:savedStory];
+    [self.persistencController save];
+}
+
 @end

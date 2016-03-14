@@ -33,10 +33,7 @@
     story.title = title;
     story.urlString = url;
     
-//    NSError *error = nil;
-//    if ([[self managedObjectContext] save:&error] == NO) {
-//        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
-//    }
+
     
     [self.persistencController save];
 }

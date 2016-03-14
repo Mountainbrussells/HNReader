@@ -6,14 +6,28 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		C906FAE41C9723C3004A348D /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C906FAE71C9723C3004A348D /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				C906FAE81C9723E7004A348D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		C906FAC41C8FB718004A348D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C906FAC31C8FB718004A348D /* CoreData.framework */; };
 		C906FACC1C8FB7BC004A348D /* BRPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FACB1C8FB7BC004A348D /* BRPersistenceController.m */; };
 		C906FACF1C8FB872004A348D /* HNReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C906FACD1C8FB872004A348D /* HNReader.xcdatamodeld */; };
 		C906FAD21C8FC6C7004A348D /* BRCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAD11C8FC6C7004A348D /* BRCoreDataController.m */; };
-		C906FADB1C8FCF1D004A348D /* NewsStory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */; };
-		C906FADC1C8FCF1D004A348D /* NewsStory.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FADA1C8FCF1D004A348D /* NewsStory.m */; };
 		C906FADF1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FADE1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m */; };
+		C906FAF71C972CA0004A348D /* NewsStory.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAF01C972CA0004A348D /* NewsStory.m */; };
+		C906FAF81C972CA0004A348D /* _NewsStory.m in Sources */ = {isa = PBXBuildFile; fileRef = C906FAF31C972CA0004A348D /* _NewsStory.m */; };
 		C910EA591C8F3CD300EA1F3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA581C8F3CD300EA1F3A /* main.m */; };
 		C910EA5C1C8F3CD300EA1F3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA5B1C8F3CD300EA1F3A /* AppDelegate.m */; };
 		C910EA5F1C8F3CD300EA1F3A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C910EA5E1C8F3CD300EA1F3A /* FirstViewController.m */; };
@@ -28,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C906FAE91C97251E004A348D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C910EA4C1C8F3CD300EA1F3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C906FAE41C9723C3004A348D;
+			remoteInfo = Mogenerator;
+		};
 		C910EA711C8F3CD300EA1F3A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C910EA4C1C8F3CD300EA1F3A /* Project object */;
@@ -51,12 +72,12 @@
 		C906FACE1C8FB872004A348D /* HNReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HNReader.xcdatamodel; sourceTree = "<group>"; };
 		C906FAD01C8FC6C7004A348D /* BRCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRCoreDataController.h; sourceTree = "<group>"; };
 		C906FAD11C8FC6C7004A348D /* BRCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRCoreDataController.m; sourceTree = "<group>"; };
-		C906FAD71C8FCF1D004A348D /* NewsStory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NewsStory+CoreDataProperties.h"; sourceTree = "<group>"; };
-		C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NewsStory+CoreDataProperties.m"; sourceTree = "<group>"; };
-		C906FAD91C8FCF1D004A348D /* NewsStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsStory.h; sourceTree = "<group>"; };
-		C906FADA1C8FCF1D004A348D /* NewsStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsStory.m; sourceTree = "<group>"; };
 		C906FADD1C8FE2F2004A348D /* BRSavedStoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSavedStoryDetailViewController.h; sourceTree = "<group>"; };
 		C906FADE1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSavedStoryDetailViewController.m; sourceTree = "<group>"; };
+		C906FAEF1C972CA0004A348D /* NewsStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsStory.h; sourceTree = "<group>"; };
+		C906FAF01C972CA0004A348D /* NewsStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsStory.m; sourceTree = "<group>"; };
+		C906FAF21C972CA0004A348D /* _NewsStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _NewsStory.h; sourceTree = "<group>"; };
+		C906FAF31C972CA0004A348D /* _NewsStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _NewsStory.m; sourceTree = "<group>"; };
 		C910EA541C8F3CD300EA1F3A /* HNReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C910EA581C8F3CD300EA1F3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C910EA5A1C8F3CD300EA1F3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,15 +139,39 @@
 		C906FAC91C8FB78B004A348D /* CoreDataSetup */ = {
 			isa = PBXGroup;
 			children = (
+				C906FAEB1C972CA0004A348D /* Model */,
 				C906FACA1C8FB7B3004A348D /* BRPersistenceController.h */,
 				C906FACB1C8FB7BC004A348D /* BRPersistenceController.m */,
-				C906FAD71C8FCF1D004A348D /* NewsStory+CoreDataProperties.h */,
-				C906FAD81C8FCF1D004A348D /* NewsStory+CoreDataProperties.m */,
-				C906FAD91C8FCF1D004A348D /* NewsStory.h */,
-				C906FADA1C8FCF1D004A348D /* NewsStory.m */,
 				C906FACD1C8FB872004A348D /* HNReader.xcdatamodeld */,
 			);
 			name = CoreDataSetup;
+			sourceTree = "<group>";
+		};
+		C906FAEB1C972CA0004A348D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C906FAEE1C972CA0004A348D /* Human */,
+				C906FAF11C972CA0004A348D /* Machine */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C906FAEE1C972CA0004A348D /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				C906FAEF1C972CA0004A348D /* NewsStory.h */,
+				C906FAF01C972CA0004A348D /* NewsStory.m */,
+			);
+			path = Human;
+			sourceTree = "<group>";
+		};
+		C906FAF11C972CA0004A348D /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				C906FAF21C972CA0004A348D /* _NewsStory.h */,
+				C906FAF31C972CA0004A348D /* _NewsStory.m */,
+			);
+			path = Machine;
 			sourceTree = "<group>";
 		};
 		C910EA4B1C8F3CD300EA1F3A = {
@@ -225,6 +270,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C906FAEA1C97251E004A348D /* PBXTargetDependency */,
 			);
 			name = HNReader;
 			productName = HNReader;
@@ -276,6 +322,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Ben Russell";
 				TargetAttributes = {
+					C906FAE41C9723C3004A348D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					C910EA531C8F3CD300EA1F3A = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -305,6 +354,7 @@
 				C910EA531C8F3CD300EA1F3A /* HNReader */,
 				C910EA6F1C8F3CD300EA1F3A /* HNReaderTests */,
 				C910EA7A1C8F3CD300EA1F3A /* HNReaderUITests */,
+				C906FAE41C9723C3004A348D /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -336,21 +386,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C906FAE81C9723E7004A348D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n\nmogenerator -m HNReader.xcdatamodeld -O HNReader/Model --template-var arc=true -M Model/Machine/ -H Model/Human/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C910EA501C8F3CD300EA1F3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C910EA621C8F3CD300EA1F3A /* SecondViewController.m in Sources */,
-				C906FADC1C8FCF1D004A348D /* NewsStory.m in Sources */,
 				C906FACC1C8FB7BC004A348D /* BRPersistenceController.m in Sources */,
 				C910EA931C8F7F7900EA1F3A /* BRDetailViewController.m in Sources */,
 				C910EA901C8F43FC00EA1F3A /* BRSeviceController.m in Sources */,
-				C906FADB1C8FCF1D004A348D /* NewsStory+CoreDataProperties.m in Sources */,
 				C910EA5C1C8F3CD300EA1F3A /* AppDelegate.m in Sources */,
 				C910EA5F1C8F3CD300EA1F3A /* FirstViewController.m in Sources */,
 				C906FACF1C8FB872004A348D /* HNReader.xcdatamodeld in Sources */,
+				C906FAF81C972CA0004A348D /* _NewsStory.m in Sources */,
 				C910EA591C8F3CD300EA1F3A /* main.m in Sources */,
+				C906FAF71C972CA0004A348D /* NewsStory.m in Sources */,
 				C906FAD21C8FC6C7004A348D /* BRCoreDataController.m in Sources */,
 				C906FADF1C8FE2F2004A348D /* BRSavedStoryDetailViewController.m in Sources */,
 			);
@@ -375,6 +441,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C906FAEA1C97251E004A348D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C906FAE41C9723C3004A348D /* Mogenerator */;
+			targetProxy = C906FAE91C97251E004A348D /* PBXContainerItemProxy */;
+		};
 		C910EA721C8F3CD300EA1F3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C910EA531C8F3CD300EA1F3A /* HNReader */;
@@ -407,6 +478,21 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C906FAE51C9723C3004A348D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C906FAE61C9723C3004A348D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C910EA821C8F3CD300EA1F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -504,6 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HNReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.BenRussell.HNReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -560,6 +647,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C906FAE71C9723C3004A348D /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C906FAE51C9723C3004A348D /* Debug */,
+				C906FAE61C9723C3004A348D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C910EA4F1C8F3CD300EA1F3A /* Build configuration list for PBXProject "HNReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

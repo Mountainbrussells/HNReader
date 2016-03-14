@@ -3,8 +3,9 @@
     <entity name="NewsStory" representedClassName="NewsStory" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="urlString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="NewsStory" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="NewsStory" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>

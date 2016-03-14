@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BRPersistenceController.h"
-#import "NewsStory+CoreDataProperties.h"
+#import "NewsStory.h"
 
 @interface BRCoreDataController : NSObject
 

@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewController.h"
-#import "NewsStory+CoreDataProperties.h"
+#import "NewsStory.h"
 #import "BRSavedStoryDetailViewController.h"
 
 @interface SecondViewController () <UITableViewDataSource, UITableViewDelegate>
